@@ -18,3 +18,19 @@ feature 'Testing form' do
     expect(page).to have_content 'John vs. Steve'
   end
 end
+
+feature 'View hit points' do
+  scenario 'see Player 2 hit points' do
+    visit('/')
+    fill_in :Player1_name, with: 'John'
+    fill_in :Player2_name, with: 'Steve'
+    click_button 'Submit'
+    expect(page).to have_content 'Steve: 8'
+  end
+end
+# feature 'hit points' do
+#   scenario 'Player 2' do
+#     visit('/play')
+#     expect(page).to have_content '8'
+#   end
+# end
