@@ -3,11 +3,8 @@ require 'sinatra/base'
 class Battle < Sinatra::Base
   enable :sessions
 
-  # get '/' do
-  #  'Testing infrastructure working!'
-  # end
-
   get '/' do
+    # 'Testing infrastructure working!'
     erb(:index)
   end
 
